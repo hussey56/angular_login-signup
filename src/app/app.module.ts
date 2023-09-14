@@ -7,11 +7,11 @@ import { ErrorComponent } from './error/error.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
-import { Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 const appRoute : Routes = [
   {path:'Home',component:HomeComponent},
-  {path:'Login',component:LoginComponent},
+  {path:'',component:LoginComponent},
   {path:'Signup',component:RegisterComponent},
   {path:'Error',component:ErrorComponent},
 ]
@@ -25,7 +25,8 @@ const appRoute : Routes = [
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    // AppRoutingModule
+    RouterModule.forRoot(appRoute)
   ],
   providers: [],
   bootstrap: [AppComponent]
