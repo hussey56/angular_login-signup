@@ -7,7 +7,14 @@ import { ErrorComponent } from './error/error.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
+import { Routes } from '@angular/router';
 
+const appRoute : Routes = [
+  {path:'Home',component:HomeComponent},
+  {path:'Login',component:LoginComponent},
+  {path:'Signup',component:RegisterComponent},
+  {path:'Error',component:ErrorComponent},
+]
 @NgModule({
   declarations: [
     AppComponent,
